@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue 3 Learning</title>
+  <script src="https://unpkg.com/vue@3"></script>
+  <style>
+    body {
+      max-width: 960px;
+      margin: 40px auto;
+      background: #eee;
+    }
+    p, h3, ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 10px;
+      background: #fff;
+      padding: 10px 20px;
+      margin: 20px auto;
+    }
+    li.fav {
+      background: #ffd0d0
+    }
+  </style>
+</head>
+<body>
+  <h1>Vue 3 Learning</h1>
+
+  <div id="app">
+    <ul>
+      <li v-for="pkmn in pokemon" @click="toggleFav(pkmn)" :class="{ fav: pkmn.isFav }">
+        <img :src="pkmn.img">
+        <h3>{{ pkmn.name }}</h3>
+        <p>{{ pkmn.type }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
