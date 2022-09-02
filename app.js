@@ -12,6 +12,11 @@ const app = Vue.createApp({
     toggleFav(pkmn) {
       pkmn.isFav = !pkmn.isFav
     }
+  },
+  computed: {
+    favoritePokemon() {
+      return this.pokemon.filter((pokemon) => pokemon.isFav)
+    }
   }
 })
 

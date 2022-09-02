@@ -34,7 +34,7 @@
 
   <div id="app">
     <ul>
-      <li v-for="pkmn in pokemon" @click="toggleFav(pkmn)" :class="{ fav: pkmn.isFav }">
+      <li v-for="pkmn in favoritePokemon" @click="toggleFav(pkmn)" :class="{ fav: pkmn.isFav }">
         <img :src="pkmn.img">
         <h3>{{ pkmn.name }}</h3>
         <p>{{ pkmn.type }}</p>
