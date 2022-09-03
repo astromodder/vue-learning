@@ -1,2 +1,2 @@
 # vue-learning
-Learning vue 3
+Displays a list of pokemon where you can highlight favorites
