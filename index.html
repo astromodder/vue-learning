@@ -17,7 +17,13 @@
   <h1>Vue 3 Learning</h1>
 
   <div id="app">
-
+    <div>
+      <ul>
+        <li v-for="item in navigation" :key="item.name">
+          <span>{{ item.name }}</span>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <script src="app.js"></script>
